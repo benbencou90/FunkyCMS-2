@@ -29,7 +29,7 @@ Un Dev' pack est proposé au membres voulant développer leurs propres plugins.
 - Mise en place de plusieurs plugins : A faire.
 
 Membres du projet et leurs fonctions
-Chef de projet et développeur: Anaconda.
+Chef de projet et développeur: ThanosS.
 Recrutements ouverts pour les autres postes.
 
 Recrutement
