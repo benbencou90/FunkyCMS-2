@@ -1,7 +1,7 @@
 MODIFICATIONS #Alkimys
 -------------
 
-Ici seront notées toute modification que j'apporterai.
+Ici seront notï¿½es toute modification que j'apporterai.
 Suppression de ce fichier en fin de projet.
 
 Poste : CODEUR -- PLUGINS
