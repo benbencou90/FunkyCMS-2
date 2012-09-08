@@ -1,11 +1,12 @@
-MODIFICATIONS #Alkimys
+MODIFICATIONS ThanosS
 
 -------------
 Ici seront notées toute modification que j'apporterai.
 -----------
 Suppression de ce fichier en fin de projet.
 -------------
-CODEUR -- PLUGINS
+CODEUR
 -----------
-8.09.12 -- Ajout au projet
+8.09.12 -- Création du dépot GitHub.
+8.09.12 -- Ajout de Alkimys et Benben dans le dépot.
 -------------
