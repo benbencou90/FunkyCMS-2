@@ -3,13 +3,18 @@
 ##	FunkyCMS
 ##	index.php
 ## ------------------->
+include('fonctions.php');
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		  <meta charset="ISO-8859-15">
+
 		  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
 		  <link rel="stylesheet" type="text/css" media="screen" href="css/html5.css" />
+		  <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css" />
+
 		  <title>Funky-CMS | Un CMS simple & efficace</title>
 		  <!-- Prise en charge des éléments HTML5 par IE -->
 			<!--[if IE]>
@@ -29,21 +34,20 @@
 	
 	<body>
 		<header>
-			<h1>Funky-CMS</h1>
+			<h1><a href="index.php" title="Funky-CMS">Funky-CMS</a></h1>
 			<p class="slogan">Un CMS simple & efficace</p>
+
+			<div id="nav">
+				<ul>
+					<li><a href="index.php?page=home" <?php if(isset($_GET['page']) && $_GET['page'] == "home" || !isset($_GET['page']) || isset($_GET['page']) && $_GET['page'] == "") { echo "class='current'"; }?>>Accueil</a></li>
+					<li><a href="index.php?page=reg" <?php if(isset($_GET['page']) && $_GET['page'] == "reg") { echo "class='current'"; }?>>Incription</a></li>
+					<li><a href="index.php?page=forum" <?php if(isset($_GET['page']) && $_GET['page'] == "forum") { echo "class='current'"; }?>>Forum</a></li>
+				</ul>
+			</div>
 		</header>
 		<div id="container">
 			<?php
-			$directory = "pages".DIRECTORY_SEPARATOR; //On donne le répertoire des pages
-			$home = $directory."home.php"; //On donne la page d'accueil
-			$nfound = $directory."404.php"; //On donne la page d'erreur 404, page non trouvée.
-			if(isset($_GET['page']) && !empty($_GET['page'])) //Si l'on a un '?page=' qui n'est pas vide, 'NULL', ou non-définie
-			{
-				$_GET['page'] = str_replace("\0", '', $_GET['page']); //On remplace par les caractères autorisés
-				$file = basename(realpath($directory.$_GET['page'].".php")); //On détermine l'emplacement du fichier.
-				$adress = $directory.$file; //On donne l'adresse de ce fichier
-				if(!empty($file) && file_exists($adress)) { include($adress); } else { include($nfound); } //S'il existe, on l'affiche, sinon, on redirige vers la page d'erreur.
-			} else { include($home); } //Sinon, on affiche la page d'accueil
+				includePage();
 			?>
 		</div>
 	</body>
